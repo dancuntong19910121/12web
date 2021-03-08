@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            position: absolute;
+        }
+        #i1{
+            /*值越大显示越靠前*/
+            z-index: 1;
+        }
+        #i2{
+            z-index: 2;
+        }
+        body{
+            background-color: black;
+        }
+        i{
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            background-image: url("https://game.gtimg.cn/images/lol/v3/topfoot-spr.png");
+            background-position: -381px -39px;
+        }
+    </style>
+</head>
+<body>
+<i></i>
+<img id="i1" src="you.jpg" alt="">
+<img id="i2" src="youshen.jpg" alt="">
+</body>
+</html>

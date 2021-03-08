@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮" onclick="fn1()">
+<script>
+    //声明无参无返回值方法
+    function fn1(){
+        alert("fn1")
+    }
+    //fn1();//调用方法
+
+    //声明有参无返回值
+    function fn2(name,age){
+        alert(name+":"+age);
+    }
+   // fn2("周深",30);
+
+    //无参有返回值
+    function fn3(){
+        return "你是返回值";
+    }
+    let info = fn3();
+    //alert(info);
+
+    //有参有返回值
+    function fn4(x,y){
+        return x*y;
+    }
+    let result = fn4(4,9);
+   // alert(result);
+
+    //第二种声明方法的方式
+    let fn5 = function(name,age){
+        alert(name+":"+age);
+    }
+    fn5("周鹏",35);
+
+    //第三种声明方法的方式
+    let fn6 = new Function("name","age","alert(name+':'+age)");
+    fn6("萨顶顶",35);
+
+
+
+</script>
+</body>
+</html>

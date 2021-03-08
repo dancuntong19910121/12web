@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //开启定时器
+    //方法调用时写括号，作为参数进行传递时不写阔号
+    setInterval(f, 2000);
+
+    function f() {
+        console.log("执行了!");
+    }
+
+    //第二种写法 通用匿名方法
+    let count = 0;
+    let timer = setInterval(function () {
+        console.log(count++);
+        if (count = 5) {
+            clearInterval(timer);
+        }
+    }, 1000);
+
+</script>
+</body>
+</html>
