@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="员工姓名">
+<input type="text" placeholder="工作">
+<input type="text" placeholder="工资">
+<input type="button" value="添加">
+<hr>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>工作</th>
+        <th>工资</th>
+        <th>操作</th>
+    </tr>
+</table>
+<script src="../js/jquery-1.4.2.js"></script>
+<script>
+    $("input:last").click(function () {
+        //给按钮添加点击事件
+        //在事件方法中创建1个tr和4个td
+        let i = $("<tr></tr>");
+        let name = $("<td></td>");
+        let job = $("<td></td>");
+        let salary = $("<td></td>");
+        let delt = $("<td><input type='button' value='删除'></td>");
+        //给3个td添加用户输入的内容，第4个td添加删除按钮
+        name.text($("input:eq(0)").val());
+        job.text($("input:eq(1)").val());
+        salary.text($("input:eq(2)").val());
+        //把4个td装进tr
+        i.append(name);
+        i.append(job);
+        i.append(salary);
+        i.append(delt);
+        //把tr装进table
+        $("table").append(i);
+        //给td里面的删除按钮添加点击事件
+        delt.children().click(function () {
+            i.remove();
+        })
+
+    });
+
+
+</script>
+</body>
+</html>
